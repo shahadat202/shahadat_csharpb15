@@ -1,11 +1,7 @@
-﻿using System;
-namespace stringMethods
+﻿internal class Program
 {
-    class methods
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        Console.WriteLine("Welcome...");
     }
 }
