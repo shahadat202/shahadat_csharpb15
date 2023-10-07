@@ -1,6 +1,7 @@
-﻿namespace stringMethods
+﻿using System;
+namespace stringMethods
 {
-    internal class Program
+    class methods
     {
         static void Main(string[] args)
         {
