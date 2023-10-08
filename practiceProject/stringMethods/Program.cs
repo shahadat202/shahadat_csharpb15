@@ -1,11 +1,10 @@
-﻿namespace ConsoleApp1
+﻿namespace stringMethods
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int n = 10;
-            Console.WriteLine(n);
+            Console.WriteLine("Hello, World!");
         }
     }
 }
