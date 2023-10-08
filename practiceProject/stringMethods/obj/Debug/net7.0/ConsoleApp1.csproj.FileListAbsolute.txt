@@ -1,0 +1,14 @@
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.exe
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.deps.json
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.runtimeconfig.json
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.dll
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\bin\Debug\net7.0\ConsoleApp1.pdb
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.AssemblyInfoInputs.cache
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.AssemblyInfo.cs
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.dll
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\obj\Debug\net7.0\refint\ConsoleApp1.dll
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.pdb
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\obj\Debug\net7.0\ConsoleApp1.genruntimeconfig.cache
+D:\All_programming\All C#_code\shahadat_csharpb15\practiceProject\ConsoleApp1\obj\Debug\net7.0\ref\ConsoleApp1.dll
