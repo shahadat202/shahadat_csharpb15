@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "practiceProject", "practiceProject\practiceProject.csproj", "{B8FE383A-50BD-4853-9691-C198234AF71B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stringMethods", "stringMethods\stringMethods.csproj", "{0A5D3B8E-00EA-4378-916F-0C2D2139CCEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "stringMethods", "stringMethods\stringMethods.csproj", "{0A5D3B8E-00EA-4378-916F-0C2D2139CCEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
