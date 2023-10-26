@@ -2,46 +2,30 @@
 {
     class Person
     {
-        private string firstName;
-        public string LastName { get; set; }
+        public string firstName; // field
+        public string lastName;
 
-        public string FirstName
+        public Person()
         {
-            get
-            {
-                if (string.IsNullOrWhiteSpace(firstName))
-                    return string.Empty;
-                return firstName;
-            }
-            set
-            {
-                if(!string.IsNullOrWhiteSpace(value))
-                    firstName = value;
-            }
-        }
-        public string FullName
-        {
-            get
-            {
-                return firstName + " " + LastName;
-            }
-        }
-        public Person() : this(string.Empty, string.Empty)
-        {
+            firstName = string.Empty;
+            lastName = string.Empty;
         }
         public Person(string firstName, string lastName)
         {
             this.firstName = firstName;
-            this.LastName = lastName;
+            this.lastName = lastName;
         }
+
         public string GetName(string separator)
         {
-            string fullName = firstName + separator + LastName;
+            string fullName = firstName + separator + lastName; 
             return fullName;
         }
+        
         public string GetName(string[] separator)
         {
-            return GetName(separator[0]);
+            string fullName = firstName + separator[0] + lastName;
+            return fullName;
         }
     }
 }

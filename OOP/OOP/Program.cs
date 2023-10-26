@@ -1,7 +1,7 @@
 ﻿using OOPBasics;
 
 Person person = new Person("Shahadat", "Hossain");
-string name = person.GetName(new string[] { " " });
+string name = person.GetName( " " );
 Console.WriteLine(name);
 
 Person person2 = new Person("Saleh", "Ahmed");
