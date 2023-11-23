@@ -11,13 +11,25 @@ namespace Task4
         public string Model { get; set; }
         public string Color { get; set; }
 
+        public Cannon(string model)
+        {
+            Model = model;
+        }
+        public Cannon(string model, string color)
+        {
+            Model = model;
+            Color = color;
+            Console.WriteLine($"Camera Model is- '{model}' and Color is- '{color}'");
+        }
         public void TakePhoto(int width, int height)
         {
             Console.WriteLine($"Took photo of size: {width}x{height}");
         }
+
         public void TakePhoto(string model, string color)
         {
-            Console.WriteLine($"Camera model is- '{model}' and color is- '{color}'");
+            Console.WriteLine($"Camera Model is- '{model}' and Color is- '{color}'");
         }
+
     }
 }
