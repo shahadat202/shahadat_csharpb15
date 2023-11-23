@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    public class Student
+    public class Student : AbstractClass
     {
         public string Name { get; set; }
         public DateTime DateOfBirth { get; set; }
-
-        public string GenerateId()
+        public override string GenerateId()
         {
-            return "S" + Name;
+            return "S-" + Name;
         }
+
+        /*public string GenerateId()
+        {
+            return "S-" + Name;
+        }*/
     }
 }
