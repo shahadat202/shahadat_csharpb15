@@ -12,5 +12,9 @@ namespace Task1
         {
             Console.WriteLine("Machine Started");
         }
+        public void Start(int a)
+        {
+            Console.WriteLine("Machine Started at " + a + " AM");
+        }
     }
 }
