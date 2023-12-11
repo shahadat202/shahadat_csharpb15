@@ -5,13 +5,7 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            Teacher teacher = new Teacher();
-            teacher.Name = "JalalUddin";
-            Console.WriteLine(teacher.GenerateId());
-
-            Student student = new Student();
-            student.Name = "Shahadat";
-            Console.WriteLine(student.GenerateId());
+            Console.WriteLine("Hello World");
         }
     }
 }

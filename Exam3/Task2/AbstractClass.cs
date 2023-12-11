@@ -9,10 +9,5 @@ namespace Task2
     public abstract class AbstractClass
     {
         public abstract string GenerateId();
-
-        /*public string GenerateId()
-        {
-            return GenerateId();
-        }*/
     }
 }

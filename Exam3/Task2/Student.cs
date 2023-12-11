@@ -14,10 +14,5 @@ namespace Task2
         {
             return "S-" + Name;
         }
-
-        /*public string GenerateId()
-        {
-            return "S-" + Name;
-        }*/
     }
 }
