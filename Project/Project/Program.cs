@@ -33,6 +33,13 @@ namespace Project
             // --- Inventory Part ----->
             Inventory petInventory = new Inventory();
 
+            List<Pet> pets = new List<Pet>()
+            {
+                new Pet { Id = 1, Type = "Dog", Price = 200, Quantity = 5},
+                new Pet { Id = 2, Type = "Cat", Price = 100, Quantity = 3},
+                new Pet { Id = 3, Type = "Bird", Price = 50, Quantity = 8}
+            };
+
             while (true)
             {
                 Console.WriteLine("What you want to do?\n");
@@ -49,19 +56,23 @@ namespace Project
                 switch (choice)
                 {
                     case "1":
-                        petInventory.ViewInventory();
+                        View.ViewInventory(pets);
                         break;
                     case "2":
                         Console.Write("Enter Pet type/name: ");
                         string purchaseName = Console.ReadLine();
                         Console.Write("Enter Pet price: ");
                         decimal purchasePrice = decimal.Parse(Console.ReadLine());
-                        Console.Write("Enter quantity: ");
+                        Console.Write("Enter quantity/pieces: ");
                         int purchaseQuantity = int.Parse(Console.ReadLine());
-                        petInventory.PurchasePet(purchaseName, purchasePrice, purchaseQuantity);
+                        Purchase.PurchasePet(pets, purchaseName, purchasePrice, purchaseQuantity);
                         break;
                     case "3":
-                        petInventory.SalePet();
+                        Console.Write("Pet Id for sale: ");
+                        int saleId = int.Parse(Console.ReadLine());
+                        Console.Write("Quantity for sell: ");
+                        int saleQuantity = int.Parse(Console.ReadLine());
+                        Sale.SalePet(pets, saleId, saleQuantity);
                         break;
                     case "4":
                         petInventory.ViewReport();
@@ -72,7 +83,6 @@ namespace Project
                     default:
                         Console.WriteLine("Invalid choice. Please enter a number between (1-5): ");
                         break;
-
                 }
             }
         }
