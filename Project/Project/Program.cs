@@ -31,14 +31,29 @@ namespace Project
             }
 
             // --- Inventory Part ----->
-            Inventory petInventory = new Inventory();
-
+            PetDbContext context = new PetDbContext();
+            
             List<Pet> pets = new List<Pet>()
             {
                 new Pet { Id = 1, Type = "Dog", Price = 200, Quantity = 5},
                 new Pet { Id = 2, Type = "Cat", Price = 100, Quantity = 3},
                 new Pet { Id = 3, Type = "Bird", Price = 50, Quantity = 8}
             };
+
+            //context.Pets.Add(new Pet()
+            //{
+            //    Id = 1, Type = "Dog", Price = 200, Quantity = 5
+            //});
+            //context.Pets.Add(new Pet()
+            //{
+            //    Id = 2, Type = "Cat", Price = 100, Quantity = 3
+            //});
+            //context.Pets.Add(new Pet()
+            //{
+            //    Id = 3, Type = "Bird", Price = 50, Quantity = 8
+            //});
+            //context.SaveChanges();
+
 
             while (true)
             {
@@ -75,9 +90,10 @@ namespace Project
                         Sale.SalePet(pets, saleId, saleQuantity);
                         break;
                     case "4":
-                        petInventory.ViewReport();
+                        Console.WriteLine("Monthly Report");
                         break;
                     case "5":
+                        Console.Clear();
                         Console.WriteLine("Logout Successful.");
                         return;
                     default:

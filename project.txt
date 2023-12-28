@@ -1,0 +1,102 @@
+Username: admin
+Password: 123456
+
+Login successfull
+
+What you want to do?
+1.View Inventory
+2.Purchase pet
+3.Sale pet
+4.View Monthly report
+5.Logout
+
+Enter your choice (1-5): 1
+
+Pet Shop Inventory
+Id	Type	Price	Quantity
+--	----	-----	--------
+1	Dog	$200	5 Pice	
+2	Cat	$100	3 Pice	
+3	Bird	$50	8 Pice
+
+What you want to do?
+1.View Inventory
+2.Purchase pet
+3.Sale pet
+4.View Monthly report
+5.Logout
+
+Enter your choice (1-5): 2
+
+Enter Pet type/name: Duck
+Enter Pet price: 60
+Enter quantity/pieces: 4
+4 Duck purchased successfully!
+
+What you want to do?
+
+1. View Inventory
+2. Purchase Pet
+3. Sale Pet
+4. View Monthly Report
+5. Logout
+
+Enter your choice (1-5):1
+
+Pet Shop Inventory
+Id      Type    Price   Quantity
+--      ----    -----   --------
+1       Dog     $200    5 pice
+2       Cat     $100    3 pice
+3       Bird    $50     8 pice
+4       Duck    $60     4 pice
+
+What you want to do?
+
+1. View Inventory
+2. Purchase Pet
+3. Sale Pet
+4. View Monthly Report
+5. Logout
+
+Enter your choice (1-5): 3
+
+Pet Id for sale: 4
+Quantity for sell: 3
+3 Duck sold successfully!
+
+What you want to do?
+
+1. View Inventory
+2. Purchase Pet
+3. Sale Pet
+4. View Monthly Report
+5. Logout
+
+Enter your choice (1-5): 1
+
+Pet Shop Inventory
+Id      Type    Price   Quantity
+--      ----    -----   --------
+1       Dog     $200    5 pice
+2       Cat     $100    3 pice
+3       Bird    $50     8 pice
+4       Duck    $60     1 pice
+
+What you want to do?
+
+1. View Inventory
+2. Purchase Pet
+3. Sale Pet
+4. View Monthly Report
+5. Logout
+
+Enter your choice (1-5): 5
+
+Logout Successfully!
+
+
+
+
+
+

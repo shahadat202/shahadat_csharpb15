@@ -15,7 +15,7 @@ namespace Project
             Console.WriteLine("--\t----\t-----\t--------");
             foreach (var pet in pets)
             {
-                Console.WriteLine($"{pet.Id}\t{pet.Type}\t$ {pet.Price}\t{pet.Quantity} pice");
+                Console.WriteLine($"{pet.Id}\t{pet.Type}\t${pet.Price}\t{pet.Quantity} pice");
             }
             Console.WriteLine();
         }

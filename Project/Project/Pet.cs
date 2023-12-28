@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    public class Pet : DbContext
+    public class Pet 
     {
         public int Id { get; set; }
         public string Type { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
-
-        DbSet<Pet> Pets { get; set;}
 
     }
 }
