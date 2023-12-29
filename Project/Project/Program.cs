@@ -32,28 +32,16 @@ namespace Project
 
             // --- Inventory Part ----->
             PetDbContext context = new PetDbContext();
-            
+            PetShop petShop = new PetShop();
+            MonthlyReport monthlyReport = new MonthlyReport();
+
             List<Pet> pets = new List<Pet>()
             {
                 new Pet { Id = 1, Type = "Dog", Price = 200, Quantity = 5},
                 new Pet { Id = 2, Type = "Cat", Price = 100, Quantity = 3},
                 new Pet { Id = 3, Type = "Bird", Price = 50, Quantity = 8}
             };
-
-            //context.Pets.Add(new Pet()
-            //{
-            //    Id = 1, Type = "Dog", Price = 200, Quantity = 5
-            //});
-            //context.Pets.Add(new Pet()
-            //{
-            //    Id = 2, Type = "Cat", Price = 100, Quantity = 3
-            //});
-            //context.Pets.Add(new Pet()
-            //{
-            //    Id = 3, Type = "Bird", Price = 50, Quantity = 8
-            //});
-            //context.SaveChanges();
-
+            context.SaveChanges();
 
             while (true)
             {
@@ -87,17 +75,17 @@ namespace Project
                         int saleId = int.Parse(Console.ReadLine());
                         Console.Write("Quantity for sell: ");
                         int saleQuantity = int.Parse(Console.ReadLine());
-                        Sale.SalePet(pets, saleId, saleQuantity);
+                        Sale.SalePet(pets, saleId, saleQuantity, monthlyReport);
                         break;
                     case "4":
-                        Console.WriteLine("Monthly Report");
+                        monthlyReport.DisplayReport();
                         break;
                     case "5":
                         Console.Clear();
-                        Console.WriteLine("Logout Successful.");
+                        Console.WriteLine("\nLogout Successful.");
                         return;
                     default:
-                        Console.WriteLine("Invalid choice. Please enter a number between (1-5): ");
+                        Console.WriteLine("Invalid choice. Please enter a number between (1-5)\n");
                         break;
                 }
             }
