@@ -5,6 +5,9 @@ namespace Project
 {
     class Program
     {
+        // --- Feeding Schedule --->
+        static FeedingScheduleManager feedingScheduleManager = new FeedingScheduleManager();
+        
         static void Main(string[] args)
         {
             // --- Login System ----->
@@ -49,10 +52,12 @@ namespace Project
                 Console.WriteLine("1. View Inventory");
                 Console.WriteLine("2. Purchase Pet");
                 Console.WriteLine("3. Sale Pet");
-                Console.WriteLine("4. View Monthly Report");
-                Console.WriteLine("5. Logout");
+                Console.WriteLine("4. View Feeding Schedule");
+                Console.WriteLine("5. View Monthly Report");
+                Console.WriteLine("6. Change Password");
+                Console.WriteLine("7. Logout");
 
-                Console.Write("\nEnter your choice (1-5): ");
+                Console.Write("\nEnter your choice (1-6): ");
                 string choice = Console.ReadLine();
                 Console.WriteLine();
 
@@ -78,14 +83,55 @@ namespace Project
                         Sale.SalePet(pets, saleId, saleQuantity, monthlyReport);
                         break;
                     case "4":
-                        monthlyReport.DisplayReport();
+                        Console.WriteLine("Feeding Schedule options: ");
+                        Console.WriteLine("1. Add Feed for Pet");
+                        Console.WriteLine("2. View feeding schedule");
+                        Console.Write("\nEnter your choice (1-2): ");
+                        int scheduleChoice = int.Parse(Console.ReadLine());
+
+                        switch (scheduleChoice)
+                        {
+                            case 1:
+                                Console.Write("\nEnter Pet Id for feeding: ");
+                                int PetIdForFeeding = int.Parse(Console.ReadLine());
+                                Console.Write("Enter quantity(KG) for feeding: ");
+                                decimal QuantityForFeeding = decimal.Parse(Console.ReadLine());
+                                Console.Write("Enter time to feeding(HH:mm): ");
+                                TimeSpan TimeForFeeding = TimeSpan.Parse(Console.ReadLine());
+                                feedingScheduleManager.AddFeeding(PetIdForFeeding, QuantityForFeeding, TimeForFeeding);
+                                break;
+                            case 2:
+                                feedingScheduleManager.ViewFeeding();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid choice for feeding schedule. Please enter (1-2): ");
+                                break;
+                        }
                         break;
                     case "5":
+                        monthlyReport.DisplayReport();
+                        break;
+                    case "6":
+                        Console.Write("Enter current password: ");
+                        string currentPassword = Console.ReadLine();
+
+                        if(login.Authenticate(CorrectUsername, currentPassword))
+                        {
+                            Console.Write("Enter new password: ");
+                            string newPassword = Console.ReadLine();
+                            login.ChangePassword(newPassword);
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nInvalid password. Change password failed.\n");
+                        }
+                        break;
+                    case "7":
                         Console.Clear();
                         Console.WriteLine("\nLogout Successful.");
                         return;
                     default:
-                        Console.WriteLine("Invalid choice. Please enter a number between (1-5)\n");
+                        Console.WriteLine("Invalid choice. Please enter a number between (1-6)\n");
                         break;
                 }
             }

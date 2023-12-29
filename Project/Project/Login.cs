@@ -20,5 +20,10 @@ namespace Project
         {
             return (enterUsername == CorrectUsername && enterPassword == CorrectPassword);  
         }
+        public void ChangePassword(string newPassword)
+        {
+            CorrectPassword = newPassword;
+            Console.WriteLine("\nPasswor changed successfully!\n");
+        }
     }
 }
