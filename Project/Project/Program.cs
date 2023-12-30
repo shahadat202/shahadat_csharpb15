@@ -35,7 +35,6 @@ namespace Project
 
             // --- Inventory Part ----->
             PetDbContext context = new PetDbContext();
-            PetShop petShop = new PetShop();
             MonthlyReport monthlyReport = new MonthlyReport();
 
             List<Pet> pets = new List<Pet>()
@@ -44,7 +43,6 @@ namespace Project
                 new Pet { Id = 2, Type = "Cat", Price = 100, Quantity = 3},
                 new Pet { Id = 3, Type = "Bird", Price = 50, Quantity = 8}
             };
-            context.SaveChanges();
 
             while (true)
             {
@@ -57,7 +55,7 @@ namespace Project
                 Console.WriteLine("6. Change Password");
                 Console.WriteLine("7. Logout");
 
-                Console.Write("\nEnter your choice (1-6): ");
+                Console.Write("\nEnter your choice (1-7): ");
                 string choice = Console.ReadLine();
                 Console.WriteLine();
 
@@ -74,6 +72,13 @@ namespace Project
                         Console.Write("Enter quantity/pieces: ");
                         int purchaseQuantity = int.Parse(Console.ReadLine());
                         Purchase.PurchasePet(pets, purchaseName, purchasePrice, purchaseQuantity);
+                        //context.Pets.Add(new Pet()
+                        //{
+                        //    Type = purchaseName,
+                        //    Price = purchasePrice,
+                        //    Quantity = purchaseQuantity
+                        //});
+                        //context.SaveChanges();
                         break;
                     case "3":
                         Console.Write("Pet Id for sale: ");

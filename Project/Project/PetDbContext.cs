@@ -12,7 +12,7 @@ namespace Project
         private readonly string _connectionString;
         public PetDbContext()
         {
-            _connectionString = "Server =DESKTOP-N8A2ENF\\SQLEXPRESS; Database = CSharpB15; User Id = csharpb15; Password = 123456; Trust Server Certificate = True";
+            _connectionString = "Server = DESKTOP-N8A2ENF\\SQLEXPRESS; Database = CSharpB15; User Id = csharpb15; Password = 123456; Trust Server Certificate = True";
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -26,6 +26,18 @@ namespace Project
 
         }
         public DbSet<Pet> Pets { get; set; }
+        public DbSet<Purchase> purchases { get; set; }
+        public DbSet<Sale> sales { get; set; }
+        public DbSet<FeedingSchedule> feedingSchedules { get; set;}
+        public DbSet<MonthlyReport> monthlyReports { get; set; }
 
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    base.OnModelCreating(modelBuilder);
+        //    modelBuilder.Entity<MonthlyReport>(entity =>
+        //    {
+        //        entity.HasNoKey();
+        //    });
+        //}
     }
 }
