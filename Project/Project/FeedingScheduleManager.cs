@@ -13,7 +13,7 @@ namespace Project
         {
             feedingSchedules = new List<FeedingSchedule>();
         }
-        public void AddFeeding(int petId, decimal quantity, TimeSpan timeSpan)
+        public void AddFeeding(int petId, int quantity, TimeSpan timeSpan)
         {
             feedingSchedules.Add(new FeedingSchedule()
             {

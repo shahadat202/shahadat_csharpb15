@@ -10,7 +10,7 @@ namespace Project
     {
         PetDbContext context = new PetDbContext();
 
-        public static void PurchasePet(List<Pet> pets, string type, decimal price, int quantity)
+        public static void PurchasePet(List<Pet> pets, string type, int price, int quantity)
         {
             int index = pets.Count + 1;
             pets.Add(new Pet { Id = index, Type = type, Price = price, Quantity = quantity });

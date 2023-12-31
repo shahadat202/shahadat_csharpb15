@@ -68,7 +68,7 @@ namespace Project
                         Console.Write("Enter Pet type/name: ");
                         string purchaseName = Console.ReadLine();
                         Console.Write("Enter Pet price: ");
-                        decimal purchasePrice = decimal.Parse(Console.ReadLine());
+                        int purchasePrice = int.Parse(Console.ReadLine());
                         Console.Write("Enter quantity/pieces: ");
                         int purchaseQuantity = int.Parse(Console.ReadLine());
                         Purchase.PurchasePet(pets, purchaseName, purchasePrice, purchaseQuantity);
@@ -100,7 +100,7 @@ namespace Project
                                 Console.Write("\nEnter Pet Id for feeding: ");
                                 int PetIdForFeeding = int.Parse(Console.ReadLine());
                                 Console.Write("Enter quantity(KG) for feeding: ");
-                                decimal QuantityForFeeding = decimal.Parse(Console.ReadLine());
+                                int QuantityForFeeding = int.Parse(Console.ReadLine());
                                 Console.Write("Enter time to feeding(HH:mm): ");
                                 TimeSpan TimeForFeeding = TimeSpan.Parse(Console.ReadLine());
                                 feedingScheduleManager.AddFeeding(PetIdForFeeding, QuantityForFeeding, TimeForFeeding);

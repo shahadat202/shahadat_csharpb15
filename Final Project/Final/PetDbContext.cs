@@ -2,14 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project
+namespace Final
 {
     public class PetDbContext : DbContext
     {
-        private readonly string _connectionString;
+        private string _connectionString;
         public PetDbContext()
         {
             _connectionString = "Server = DESKTOP-N8A2ENF\\SQLEXPRESS; Database = CSharpB15; User Id = csharpb15; Password = 123456; Trust Server Certificate = True";
@@ -27,7 +28,6 @@ namespace Project
         }
         public DbSet<Pet> Pets { get; set; }
         public DbSet<Purchase> purchases { get; set; }
-        public DbSet<Sale> sales { get; set; }
-        
+        public DbSet<Sale> Sales { get; set;}
     }
 }
