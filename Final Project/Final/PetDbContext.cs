@@ -28,6 +28,8 @@ namespace Final
         }
         public DbSet<Pet> Pets { get; set; }
         public DbSet<Purchase> purchases { get; set; }
-        public DbSet<Sale> Sales { get; set;}
+
+        //public DbSet<Sale> Sales { get; set;}
+        public DbSet<Report> Reports { get; set; }
     }
 }

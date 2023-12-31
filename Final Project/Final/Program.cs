@@ -34,7 +34,7 @@ namespace Final
             PetDbContext context = new PetDbContext();
             View view = new View();
             PurchaseManager purchaseManager = new PurchaseManager(context, view);
-            
+            ReportManager reportManager = new ReportManager(context);
 
             // --- Inventory Part ---> 
             List<Pet> pets = new List<Pet>
@@ -49,10 +49,11 @@ namespace Final
                 Console.WriteLine("What you want to do?\n");
                 Console.WriteLine("1. View Inventory");
                 Console.WriteLine("2. Purchase Pet");
-                Console.WriteLine("3. Change Password");
-                Console.WriteLine("4. Logout");
-
-                Console.Write("\nEnter your choice (1-4): ");
+                Console.WriteLine("3. Sale Pet");
+                Console.WriteLine("4. View Report");
+                Console.WriteLine("5. Change Password");
+                Console.WriteLine("6. Logout");
+                Console.Write("\nEnter your choice (1-5): ");
                 string choice = Console.ReadLine();
                 Console.WriteLine();
 
@@ -72,6 +73,17 @@ namespace Final
                         pets = purchaseManager.PurchasePet(pets, purchaseType, purchasePrice, purchaseQuantity);
                         break;
                     case "3":
+                        Console.Write("Pet Id for sale: ");
+                        int saleId = int.Parse(Console.ReadLine());
+                        Console.Write("Quantity for sale: ");
+                        int saleQuantity = int.Parse(Console.ReadLine());
+                        SaleManager.SalePet(pets, saleId, saleQuantity, reportManager); //context
+                        reportManager.SaveChanges();
+                        break;
+                    case "4":
+                        reportManager.DisplayReport();
+                        break;
+                    case "5":
                         Console.Write("Enter current password: ");
                         string currentPassword = Console.ReadLine();
 
@@ -86,7 +98,7 @@ namespace Final
                             Console.WriteLine("\nInvalid password. Change password failed.\n");
                         }
                         break;
-                    case "4":
+                    case "6":
                         Console.Clear();
                         Console.WriteLine("\nLogout Successful.");
                         return;
