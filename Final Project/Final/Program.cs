@@ -35,6 +35,7 @@ namespace Final
             View view = new View();
             PurchaseManager purchaseManager = new PurchaseManager(context, view);
             ReportManager reportManager = new ReportManager(context);
+            FeedingManager feedingManager = new FeedingManager(context);
 
             // --- Inventory Part ---> 
             List<Pet> pets = new List<Pet>
@@ -50,10 +51,11 @@ namespace Final
                 Console.WriteLine("1. View Inventory");
                 Console.WriteLine("2. Purchase Pet");
                 Console.WriteLine("3. Sale Pet");
-                Console.WriteLine("4. View Report");
-                Console.WriteLine("5. Change Password");
-                Console.WriteLine("6. Logout");
-                Console.Write("\nEnter your choice (1-5): ");
+                Console.WriteLine("4. View Feeding Schedule");
+                Console.WriteLine("5. View Report");
+                Console.WriteLine("6. Change Password");
+                Console.WriteLine("7. Logout");
+                Console.Write("\nEnter your choice (1-7): ");
                 string choice = Console.ReadLine();
                 Console.WriteLine();
 
@@ -81,9 +83,35 @@ namespace Final
                         reportManager.SaveChanges();
                         break;
                     case "4":
-                        reportManager.DisplayReport();
+                        Console.WriteLine("  Feeding Schedule options: ");
+                        Console.WriteLine("  1. Add Feed for Pet");
+                        Console.WriteLine("  2. View feeding schedule");
+                        Console.Write("\n  Enter your choice (1-2): ");
+                        int scheduleChoice = int.Parse(Console.ReadLine());
+
+                        switch (scheduleChoice)
+                        {
+                            case 1:
+                                Console.Write("\n  Enter Pet Id for feeding: ");
+                                int PetId = int.Parse(Console.ReadLine());
+                                Console.Write("  Enter quantity(KG) for feeding: ");
+                                int QuantityForFeeding = int.Parse(Console.ReadLine());
+                                Console.Write("  Enter time to feeding(HH:mm): ");
+                                TimeSpan TimeForFeeding = TimeSpan.Parse(Console.ReadLine());
+                                feedingManager.AddFeeding(PetId, QuantityForFeeding, TimeForFeeding);
+                                break;
+                            case 2:
+                                feedingManager.ViewFeeding();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid choice for feeding schedule. Please enter (1-2): ");
+                                break;
+                        }
                         break;
                     case "5":
+                        reportManager.DisplayReport();
+                        break;
+                    case "6":
                         Console.Write("Enter current password: ");
                         string currentPassword = Console.ReadLine();
 
@@ -98,7 +126,7 @@ namespace Final
                             Console.WriteLine("\nInvalid password. Change password failed.\n");
                         }
                         break;
-                    case "6":
+                    case "7":
                         Console.Clear();
                         Console.WriteLine("\nLogout Successful.");
                         return;

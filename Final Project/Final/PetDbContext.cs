@@ -31,5 +31,6 @@ namespace Final
 
         //public DbSet<Sale> Sales { get; set;}
         public DbSet<Report> Reports { get; set; }
+        public DbSet<Feeding> Feedings { get; set; }
     }
 }
