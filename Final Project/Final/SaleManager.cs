@@ -16,7 +16,7 @@ namespace Final
             this.context = context;
             this.reportManager = reportManager;
         }
-        public static void SalePet(List<Pet> pets, int id, int quantity, ReportManager reportManager) //PetDbContext context
+        public static void SalePet(List<Pet> pets, int id, int quantity, ReportManager reportManager, PetDbContext context)
         {
             Pet existingPet = pets.Find(x => x.Id == id);
             if (existingPet != null && existingPet.Quantity >= quantity)
@@ -29,7 +29,17 @@ namespace Final
 
                 Console.WriteLine($"{quantity} {existingPet.Type} sold successfully!");
                 
-                //context.SaveChanges();
+                if (existingPet.Quantity == 0)
+                {
+                    pets.Remove(existingPet);
+
+                    var PetToRemove = context.Pets.Find(id);
+                    if( PetToRemove != null )
+                    {
+                        context.Pets.Remove(PetToRemove);
+                        context.SaveChanges();
+                    }
+                }
             }
             else
             {

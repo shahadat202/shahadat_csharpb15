@@ -79,7 +79,7 @@ namespace Final
                         int saleId = int.Parse(Console.ReadLine());
                         Console.Write("Quantity for sale: ");
                         int saleQuantity = int.Parse(Console.ReadLine());
-                        SaleManager.SalePet(pets, saleId, saleQuantity, reportManager); //context
+                        SaleManager.SalePet(pets, saleId, saleQuantity, reportManager, context); 
                         reportManager.SaveChanges();
                         break;
                     case "4":
